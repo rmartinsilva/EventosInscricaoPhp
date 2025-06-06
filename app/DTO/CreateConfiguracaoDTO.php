@@ -1,0 +1,21 @@
+<?php
+
+namespace App\DTO;
+
+use App\Http\Requests\StoreConfiguracaoRequest;
+
+class CreateConfiguracaoDTO
+{
+    public function __construct(
+        public string $descricao_api,
+        public string $chave_api,
+    ) {}
+
+    public static function makeFromRequest(StoreConfiguracaoRequest $request): self
+    {
+        return new self(
+            $request->descricao_api,
+            $request->chave_api,
+        );
+    }
+} 
