@@ -14,7 +14,10 @@ return new class extends Migration
         Schema::create('configuracoes', function (Blueprint $table) {
             $table->id();
             $table->string('descricao_api')->unique()->comment('Descrição da API para identificação');
-            $table->text('chave_api')->comment('Chave ou token da API'); // Usar text para chaves potencialmente longas
+            $table->text('chave_api')->comment('Chave ou token da API'); // Usar text para chaves potencialmente longas           
+            $table->text('token_api')->nullable()->comment('Token da API');
+            $table->text('webhooksecret')->nullable()->comment('Webhook Secret');
+            $table->string('notificationurl')->nullable()->comment('URL de Notificação');
             $table->timestamps();
         });
     }

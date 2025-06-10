@@ -24,17 +24,21 @@ class Configuracao extends Model
     protected $fillable = [
         'descricao_api',
         'chave_api',
+        'token_api',
+        'webhooksecret',
+        'notificationurl',
     ];
 
     /**
      * The attributes that should be hidden for serialization.
      *
      * @var array<int, string>
-     
-    protected $hidden = [
-        'chave_api',
+     */
+    protected $hidden = [       
+        'token_api',
+        'webhooksecret',
     ];
-*/
+
     /**
      * Indicates if the model should be timestamped.
      *

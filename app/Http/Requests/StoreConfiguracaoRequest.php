@@ -32,6 +32,9 @@ class StoreConfiguracaoRequest extends BaseRequest // Alterar para BaseRequest
                 Rule::unique('configuracoes', 'descricao_api') // Garante unicidade
             ],
             'chave_api' => 'required|string',
+            'token_api' => 'nullable|string',
+            'webhooksecret' => 'nullable|string',
+            'notificationurl' => 'nullable|string|url',
         ];
     }
 }

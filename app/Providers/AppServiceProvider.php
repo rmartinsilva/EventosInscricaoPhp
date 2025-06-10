@@ -104,8 +104,8 @@ class AppServiceProvider extends ServiceProvider
         });
         $this->app->singleton(InscricaoService::class, function ($app) {
             return new InscricaoService(
-                $app->make(InscricaoRepositoryInterface::class),
-                $app->make(EventoRepositoryInterface::class)
+                $app->make(InscricaoRepositoryInterface::class)
+                //,$app->make(EventoRepositoryInterface::class)
             );
         });
         $this->app->singleton(EsperaService::class, function ($app) {
@@ -113,8 +113,8 @@ class AppServiceProvider extends ServiceProvider
         });
         $this->app->singleton(MercadoPagoService::class, function ($app) {
             return new MercadoPagoService(
-                $app->make(InscricaoService::class),
-                $app->make(EsperaService::class)
+                // $app->make(InscricaoService::class),
+                // $app->make(EsperaService::class)
             );
         });
         $this->app->singleton(UsuarioService::class, function ($app) {

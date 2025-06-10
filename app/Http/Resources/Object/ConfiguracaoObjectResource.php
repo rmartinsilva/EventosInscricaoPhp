@@ -22,6 +22,9 @@ class ConfiguracaoObjectResource
             'id' => $this->objeto->id ?? null,
             'descricao_api' => $this->objeto->descricao_api ?? null,
             'chave_api' => $this->objeto->chave_api ?? null, // Omitido devido ao $hidden no Model
+            'token_api' => $this->objeto->token_api ?? null,
+            'webhooksecret' => $this->objeto->webhooksecret ?? null,
+            'notificationurl' => $this->objeto->notificationurl ?? null,
            
         ];
     }

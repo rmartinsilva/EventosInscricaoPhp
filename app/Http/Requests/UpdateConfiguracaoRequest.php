@@ -34,6 +34,9 @@ class UpdateConfiguracaoRequest extends BaseRequest // Alterar para BaseRequest
                 Rule::unique('configuracoes', 'descricao_api')->ignore($id) // Ignora o registro atual na verificação de unicidade
             ],
             'chave_api' => 'nullable|string', // Chave é opcional na atualização
+            'token_api' => 'nullable|string',
+            'webhooksecret' => 'nullable|string',
+            'notificationurl' => 'nullable|string|url',
         ];
     }
 }

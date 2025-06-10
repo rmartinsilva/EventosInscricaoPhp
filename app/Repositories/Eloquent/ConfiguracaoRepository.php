@@ -77,6 +77,12 @@ class ConfiguracaoRepository implements ConfiguracaoRepositoryInterface
         if (empty($data['chave_api'])) {
             unset($data['chave_api']);
         }
+        if (empty($data['token_api'])) {
+            unset($data['token_api']);
+        }
+        if (empty($data['webhooksecret'])) {
+            unset($data['webhooksecret']);
+        }
         
         $configuracao->update($data);
 

@@ -22,6 +22,9 @@ class ConfiguracaoResource extends JsonResource
             'id' => $this->id,
             'descricao_api' => $this->descricao_api,
              'chave_api' => $this->chave_api, // Omitido devido ao $hidden no Model
+            'token_api' => $this->when($this->token_api, $this->token_api),
+            'webhooksecret' => $this->when($this->webhooksecret, $this->webhooksecret),
+            'notificationurl' => $this->notificationurl,
             //'created_at' => $this->created_at ? $this->created_at->toDateTimeString() : null,
             //'updated_at' => $this->updated_at ? $this->updated_at->toDateTimeString() : null,
         ];
