@@ -19,7 +19,7 @@ class UsuarioSeeder extends Seeder
             [
                 'name' => 'Administrador',
                 'login' => 'admin',
-                'password' => Hash::make('rms10')
+                'password' => Hash::make('102030')
             ]
         );
     }
