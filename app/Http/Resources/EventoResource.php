@@ -23,6 +23,7 @@ class EventoResource extends JsonResource
             'data_final_inscricoes' => $this->data_final_inscricoes ? $this->data_final_inscricoes->format('Y-m-d H:i:s') : null, // Formatado
             'numero_inscricoes' => $this->numero_inscricoes,
             'cortesias' => $this->cortesias,
+            'numero_cortesia' => $this->numero_cortesia,
             'url' => $this->url,
             //'valor' => Money::USD($this->valor,true),
             'valor' => $this->valor,
