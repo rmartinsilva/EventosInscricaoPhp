@@ -134,6 +134,10 @@ Route::controller(EventoController::class)->group(function () {
     Route::get('evento/{url}', 'showByUrl')->name('eventos.showByUrl');
 });
 
+Route::controller(ConfiguracaoController::class)->group(function () {    
+    Route::get('configuracoes/{configuracao}', 'show');    
+});
+
   // Rotas para Inscricoes
   Route::controller(InscricaoController::class)->group(function () {
     Route::get('inscricoes', 'index');
